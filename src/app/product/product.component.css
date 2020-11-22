@@ -1,0 +1,58 @@
+.form-container {
+    height: 800px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title {
+    width: 70%;
+    display: flex;
+    font-size: 1.5em;
+}
+
+.form-title > h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0;
+}
+
+.form-actions {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.form-actions > button{
+    margin-left: 8px;
+}
+
+form {
+    border: 1px solid #aaaaaa;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+}
+
+.input-container > label {
+    padding-bottom: 4px;
+}
+
+.input-container > input {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.alert.alert-danger {
+    margin: 0;
+    color: red;
+}

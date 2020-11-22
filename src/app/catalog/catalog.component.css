@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+th {
+  background-color: #512da8;
+  color: white;
+}
+
+.product-listing {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #add-product {
+    width: 168px;
+    height: 40px;
+    font-weight: 600;
+    font-size: small;
+    background-color: #140078;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  #add-product-button {
+    margin: 24px 0;
+  }

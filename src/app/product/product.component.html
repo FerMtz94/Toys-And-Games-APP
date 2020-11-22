@@ -1,0 +1,92 @@
+<div class="form-container">
+    <div class="form-title">
+        <h4>Product</h4>
+    </div>
+    <form [formGroup]="productForm">
+
+        <div class="input-container">
+          <label>
+            Name:
+          </label>
+          <input type="text" formControlName="name">
+    
+          <div *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                class="alert alert-danger">
+            <div *ngIf="name?.errors.required">
+              This field is required.
+            </div>
+            <div *ngIf="name?.errors.maxlength">
+              This field must be at most 50 characters long.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label>
+            Price:
+          </label>
+          <input type="number" formControlName="price">
+          <div *ngIf="price?.invalid && (price?.dirty || price?.touched)"
+                class="alert alert-danger">
+            <div *ngIf="price?.errors.required">
+              This value is required.
+            </div>
+            <div *ngIf="price?.errors.min">
+              Value must be at least 1.
+            </div>
+            <div *ngIf="price?.errors.max">
+              Value must be at most 1000.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label>
+            Company:
+          </label>
+          <input type="text" formControlName="company">
+          <div *ngIf="company?.invalid && (company?.dirty || company?.touched)"
+                class="alert alert-danger">
+            <div *ngIf="company?.errors.required">
+              This field is required.
+            </div>
+            <div *ngIf="company?.errors.maxlength">
+              This field must be at most 50 characters long.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label>
+            Maximum Age:
+          </label>
+          <input type="number" formControlName="ageRestriction">
+          <div *ngIf="ageRestriction?.invalid && (ageRestriction?.dirty || ageRestriction?.touched)"
+                class="alert alert-danger">
+            <div *ngIf="ageRestriction?.errors.min">
+              Value must be at least 0.
+            </div>
+            <div *ngIf="ageRestriction?.errors.max">
+              Value must be at most 100.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label>
+            Description:
+          </label>
+          <input type="text" formControlName="description">
+          <div *ngIf="description?.invalid && (description?.dirty || description?.touched)"
+                class="alert alert-danger">
+            <div *ngIf="description?.errors.maxlength">
+              This field must be at most 100 characters long.
+            </div>
+          </div>
+        </div>
+    </form>
+    <div class="form-actions">
+        <button (click)="onSubmit()">Save</button>
+        <button (click)="onReturnHome()">Cancel</button>
+    </div>
+</div>

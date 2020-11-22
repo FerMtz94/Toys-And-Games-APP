@@ -1,0 +1,31 @@
+<div class="product-listing">
+    <div id="add-product-button">
+        <button id="add-product" (click)="onAdd()">Add New +</button>
+    </div>
+    <div class="listing">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Age Restriction</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let product of products | async">
+                <td> {{ product.id }} </td>
+                <td> {{ product.name }} </td>
+                <td> {{ product.description }} </td>
+                <td> {{ product.ageRestriction }} </td>
+                <td> {{ product.company }} </td>
+                <td> {{ product.price }} </td>
+                <td>
+                    <a [routerLink]="['/product', product.id]">Update</a>
+                    |
+                    <a (click)="onDelete(product.id)">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
